@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Webpage 2</title>
+  </head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar navbar-dark bg-success ">
+        <div class="container">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#">
+                    <img src="threej-logo-cir-green.png" alt="threej-circle-logo" width="50px" height="50px">
+                    <a class="navbar-brand" href="#"></i>ThreeJ Payslip</a>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container p-5">
+        <div class="row border border-dark shadow-lg">
+        <label class="form-check-label fw-bold mt-2" for="flexCheckDefault">EMPLOYEE INFORMATION</label>
+        <div class="col-4 p-3">
+            <!-- Employee Details -->
+            <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Employee Number:</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Firstname:</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Middle Name:</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Surname:</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Civil Status:</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Designation:</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+        </div>
+        <div class="col-4 p-3">
+            <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Number of Dependent(s):</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Paydate:</span>
+                <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Employee Status:</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Department:</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+        </div>
+        <div class="col-4 p-3">
+            <div class="row">
+                <div class="d-flex justify-content-center ">
+                <img id="output" src="emp.png" class="img-thumbnail rounded-circle border border-success" style="height:150px; width:150px;" alt="">
+                </div>
+            </div>
+            <div class="row p-3">
+                
+                <div class="input-group input-group-sm mb-2">
+                    <input type="file" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" accept="image/*" name="image" id="file"  onchange="loadFile(event)">
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="row border border-dark shadow-lg mt-3 p-2">
+            <div class="row d-flex justify-content-around">
+                <div class="col-5 border border-dark shadow-lg mt-3">
+                    <label class="form-check-label fw-bold" for="flexCheckDefault">BASIC PAY</label>
+                    <div class="container mt-1" id="basic-pay">
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Rate/Hour:</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">No. of Hours/Cut off:</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Income Per Cut Off:</span>
+                            <input class="form-control" type="text" value="" aria-label="Disabled input example" disabled readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 border border-dark shadow-lg mt-3">
+                    <label class="form-check-label fw-bold" for="flexCheckDefault">REGULAR DEDUCTION</label>
+                    <div class="container mt-1" id="regular-deduction">
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">SSS Contribution:</span>
+                            <input type="text" placeholder="0.00 "class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="0.00" disabled>
+                        </div>
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">PhilHealth Contribution:</span>
+                            <input type="text" placeholder="0.00 "class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="100" disabled>
+                        </div>
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">PAGIBIG Contribution:</span>
+                            <input type="text" placeholder="0.00 "class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="100" disabled>
+                        </div>
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Tax:</span>
+                            <input type="text" placeholder="0.00 "class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="0.00" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-around">
+                <div class="col-5 border border-dark shadow-lg mt-3">
+                    <label class="form-check-label fw-bold" for="flexCheckDefault">HONORARIUM</label>
+                    <div class="container mt-1" id="honorarium">
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Rate/Hour:</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">No. of Hours/Cut off:</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Total Honorarium Pay:</span>
+                            <input class="form-control" type="text" value="" aria-label="Disabled input example" disabled readonly>
+                        </div>
+                    </div>
+
+                    <label class="form-check-label fw-bold" for="flexCheckDefault">OTHER INCOME</label>
+                    <div class="container mt-1" id="other-income">
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Rate/Hour:</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">No. of Hours/Cut off:</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-2">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Total Other Income Pay:</span>
+                            <input class="form-control" type="text" value="" aria-label="Disabled input example" disabled readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 border border-dark shadow-lg mt-3">
+                    <label class="form-check-label fw-bold" for="flexCheckDefault">OTHER DEDUCTION</label>
+                    <div class="container mt-1" id="other-deduction">
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">SSS Loan:</span>
+                            <input type="number" placeholder="0.00 "class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">PAGIBIG Loan:</span>
+                            <input type="number" placeholder="0.00 "class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Faculty Savings Deposit:</span>
+                            <input type="number" placeholder="0.00 "class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Faculty Savings Loan:</span>
+                            <input type="number" placeholder="0.00 "class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Salary Loan:</span>
+                            <input type="number" placeholder="0.00 "class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Others:</span>
+                            <select class="form-select">
+                                <option selected-disabled>Select other deduction</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                            <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-3 d-flex justify-content-around">
+                <div class="col-5 border border-dark shadow-lg mt-3 p-3 ">
+                    <label class="form-check-label fw-bold" for="flexCheckDefault">INCOME SUMMARY</label>
+                    <div class="input-group input-group-sm mt-2">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">GROSS INCOME:</span>
+                        <input class="form-control" type="number" value="" aria-label="Disabled input example" id="gross-income"disabled readonly>
+                    </div>
+                    <div class="input-group input-group-sm mt-2">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">NET INCOME:</span>
+                        <input class="form-control" type="number" value="" aria-label="Disabled input example" id="net-income" disabled readonly>
+                    </div>
+                </div>
+                <div class="col-5 border border-dark shadow-lg mt-3 p-3 ">
+                    <label class="form-check-label fw-bold" for="flexCheckDefault">DEDUCTION SUMMARY</label>
+                    <div class="input-group input-group-sm mt-3">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Total Deductions:</span>
+                        <input class="form-control" type="number" value="" aria-label="Disabled input example" id="total-deduction" disabled readonly>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 ms-3 d-flex justify-content-around  shadow-lg p-3">
+                <button type="button" class="btn btn-success" id="calc-gross-income">CALCULATE GROSS INCOME</button>
+                <button type="button" class="btn btn-success" id="calc-net-income">CALCULATE NET INCOME</button>
+                <button type="button" class="btn btn-success"id="new-pay">NEW</button>
+                <button type="button" class="btn btn-danger">CANCEL</button>
+                <button type="button" class="btn btn-success">PRINT PAYSLIP</button>
+                <button type="button" class="btn btn-success">PREVIEW PAYSLIP DETAILS</button>
+                <button type="button" class="btn btn-danger" onclick="window.location.href='../menu/index.html';" >EXIT</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        //change profile
+        var loadFile = function(event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
+</body>
+</html>
