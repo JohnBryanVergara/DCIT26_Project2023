@@ -9,7 +9,7 @@
 			email.value = '';
 			password.value = '';
 		} else {
-			window.location.replace('../menu/index.html');
+			window.location.replace('/DCIT26_Project2023/menu/index.html');
 		}
 	});
 })();
